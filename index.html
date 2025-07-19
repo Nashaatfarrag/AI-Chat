@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Pidima AI Chat Sidebar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="instructions">
+    <h1>Welcome to Pidima AI Chat</h1>
+    
+    <div class="steps">
+      <h2>How to Use:</h2>
+      <ol>
+        <li>Click the <span class="highlight">💬 Chat button</span> in the bottom right</li>
+        <li>Type your message in the input box</li>
+        <li>Press Enter or click Send to chat</li>
+        <li>Wait for the AI's response</li>
+      </ol>
+    </div>
+
+    <p><strong>Features:</strong></p>
+    <ul>
+      <li>Real-time chat with AI</li>
+      <li>Message history with timestamps</li>
+      <li>Delete messages with one click</li>
+      <li>Notification sounds for new messages</li>
+    </ul>
+  </div>
+
+  <button id="chat-toggle" aria-label="Open chat sidebar">💬</button>
+  <aside id="chat-sidebar" class="collapsed">
+    <header>
+      <h2>Pidima Chat</h2>
+      <button id="close-chat" aria-label="Close chat sidebar">×</button>
+    </header>
+    <section id="chat-history"></section>
+    <div id="typing-indicator" class="hidden">User is typing...</div>
+    <form id="chat-form" autocomplete="off">
+      <input type="text" id="chat-input" placeholder="Type a message..." maxlength="500" required />
+      <button type="submit">Send</button>
+    </form>
+  </aside>
+  <script src="script.js"></script>
+</body>
+</html>
